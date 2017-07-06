@@ -28,7 +28,7 @@ public class RefundResponse extends TapPayResponse {
 
 	@Override
 	public String toString() {
-		return "RefundResponse [status=" + status + ", message=" + message + "refundAmount=" + refundAmount
+		return "RefundResponse [status=" + status + ", message=" + message + ", refundAmount=" + refundAmount
 				+ ", captured=" + captured + "]";
 	}
 
