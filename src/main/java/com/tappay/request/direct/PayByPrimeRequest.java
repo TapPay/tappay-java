@@ -1,15 +1,14 @@
 package com.tappay.request.direct;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import com.google.gson.annotations.SerializedName;
 import com.tappay.exception.ArgumentsValidException;
 import com.tappay.exception.TapPayInitialException;
 import com.tappay.request.Cardholder;
+import com.tappay.request.TapPayRequest;
 import com.tappay.service.TapPay;
 import com.tappay.utils.StringUtil;
 
-public class PayByPrimeRequest {
+public class PayByPrimeRequest extends TapPayRequest {
 
 	private String prime;
 	@SerializedName("partnerkey")
@@ -42,11 +41,6 @@ public class PayByPrimeRequest {
 		this.remember = builder.remember;
 		this.cardholder = builder.cardholder;
 		this.details = builder.details;
-	}
-
-	public String toJson() {
-		Gson gson = new GsonBuilder().create();
-		return gson.toJson(this, PayByPrimeRequest.class);
 	}
 
 	public static class Builder {

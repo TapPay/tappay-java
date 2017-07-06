@@ -24,4 +24,9 @@ public class TapPayResponse {
 		this.message = message;
 	}
 
+	@Override
+	public String toString() {
+		return "TapPayResponse [status=" + status + ", message=" + message + "]";
+	}
+
 }

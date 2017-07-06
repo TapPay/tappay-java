@@ -55,4 +55,9 @@ public class TapPay {
 		return DirectPay.newInstance();
 	}
 
+	public static Refund createRefund() throws TapPayInitialException {
+		initialValidate();
+		return Refund.newInstance();
+	}
+
 }
