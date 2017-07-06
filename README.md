@@ -1,10 +1,8 @@
 # TapPay Java Library
 You can sign up for TapPay account at [https://www.tappaysdk.com](https://www.tappaysdk.com)
 ## Requirements
-***
 Java 1.7 or later.
 ## Direct Pay By Prime Usage
-***
 ```java
 import com.tappay.exception.ArgumentsValidException;
 import com.tappay.exception.TapPayInitialException;
