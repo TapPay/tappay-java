@@ -1,9 +1,6 @@
 package com.tappay.service;
 
 import com.tappay.exception.TapPayInitialException;
-import com.tappay.request.Cardholder;
-import com.tappay.request.direct.PayByPrimeRequest;
-import com.tappay.response.direct.PayByPrimeResponse;
 import com.tappay.utils.StringUtil;
 import com.tappay.utils.TapPayEnvironment;
 
