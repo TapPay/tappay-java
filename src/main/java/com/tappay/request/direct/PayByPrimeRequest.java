@@ -24,7 +24,7 @@ public class PayByPrimeRequest extends TapPayRequest {
 	private String details;
 	private Integer instalment;
 	@SerializedName("authtocapperiodinday")
-	private Integer authToCapPerionInDay;
+	private Integer authToCapPeriodInDay;
 	private Boolean remember;
 	private Cardholder cardholder;
 
@@ -37,7 +37,7 @@ public class PayByPrimeRequest extends TapPayRequest {
 		this.partnerTradeId = builder.partnerTradeId;
 		this.orderId = builder.orderId;
 		this.instalment = builder.instalment;
-		this.authToCapPerionInDay = builder.authToCapPerionInDay;
+		this.authToCapPeriodInDay = builder.authToCapPeriodInDay;
 		this.remember = builder.remember;
 		this.cardholder = builder.cardholder;
 		this.details = builder.details;
@@ -53,7 +53,7 @@ public class PayByPrimeRequest extends TapPayRequest {
 		private String orderId;
 		private String details;
 		private Integer instalment = 0;
-		private Integer authToCapPerionInDay = 0;
+		private Integer authToCapPeriodInDay = 0;
 		private Boolean remember;
 		private Cardholder cardholder;
 
@@ -97,8 +97,8 @@ public class PayByPrimeRequest extends TapPayRequest {
 			return this;
 		}
 
-		public Builder authToCapPerionInDay(Integer authToCapPerionInDay) {
-			this.authToCapPerionInDay = authToCapPerionInDay;
+		public Builder authToCapPeriodInDay(Integer authToCapPeriodInDay) {
+			this.authToCapPeriodInDay = authToCapPeriodInDay;
 			return this;
 		}
 
@@ -204,12 +204,12 @@ public class PayByPrimeRequest extends TapPayRequest {
 		this.instalment = instalment;
 	}
 
-	public Integer getAuthToCapPerionInDay() {
-		return authToCapPerionInDay;
+	public Integer getAuthToCapPeriodInDay() {
+		return authToCapPeriodInDay;
 	}
 
-	public void setAuthToCapPerionInDay(Integer authToCapPerionInDay) {
-		this.authToCapPerionInDay = authToCapPerionInDay;
+	public void setAuthToCapPeriodInDay(Integer authToCapPeriodInDay) {
+		this.authToCapPeriodInDay = authToCapPeriodInDay;
 	}
 
 	public Boolean getRemember() {
@@ -232,8 +232,8 @@ public class PayByPrimeRequest extends TapPayRequest {
 	public String toString() {
 		return "PayByPrimeRequest [prime=" + prime + ", partnerKey=" + partnerKey + ", merchantId=" + merchantId
 				+ ", amount=" + amount + ", currency=" + currency + ", partnerTradeId=" + partnerTradeId + ", orderId="
-				+ orderId + ", details=" + details + ", instalment=" + instalment + ", authToCapPerionInDay="
-				+ authToCapPerionInDay + ", remember=" + remember + ", cardholder=" + cardholder + "]";
+				+ orderId + ", details=" + details + ", instalment=" + instalment + ", authToCapPeriodInDay="
+				+ authToCapPeriodInDay + ", remember=" + remember + ", cardholder=" + cardholder + "]";
 	}
 
 }
