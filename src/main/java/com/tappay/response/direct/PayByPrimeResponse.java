@@ -9,7 +9,7 @@ import com.tappay.response.TapPayResponse;
 public class PayByPrimeResponse extends TapPayResponse {
 
 	@SerializedName("rectradeid")
-	private String recordId;
+	private String recTradeId;
 	@SerializedName("orderid")
 	private String orderId;
 	@SerializedName("authcode")
@@ -23,13 +23,17 @@ public class PayByPrimeResponse extends TapPayResponse {
 	private BankTransactionTime bankTransactionTime;
 	@SerializedName("cardinfo")
 	private CardInfo cardInfo;
+	@SerializedName("bankresultcode")
+	private String bankResultCode;
+	@SerializedName("bankresultmsg")
+	private String bankResultMsg;
 
-	public String getRecordId() {
-		return recordId;
+	public String getRecTradeId() {
+		return recTradeId;
 	}
 
-	public void setRecordId(String recordId) {
-		this.recordId = recordId;
+	public void setRecTradeId(String recTradeId) {
+		this.recTradeId = recTradeId;
 	}
 
 	public String getOrderId() {
@@ -88,12 +92,29 @@ public class PayByPrimeResponse extends TapPayResponse {
 		this.cardInfo = cardInfo;
 	}
 
+	public String getBankResultCode() {
+		return bankResultCode;
+	}
+
+	public void setBankResultCode(String bankResultCode) {
+		this.bankResultCode = bankResultCode;
+	}
+
+	public String getBankResultMsg() {
+		return bankResultMsg;
+	}
+
+	public void setBankResultMsg(String bankResultMsg) {
+		this.bankResultMsg = bankResultMsg;
+	}
+
 	@Override
 	public String toString() {
-		return "PayByPrimeResponse [status=" + status + ", message=" + message + ", recordId=" + recordId + ", orderId="
-				+ orderId + ", authCode=" + authCode + ", acquirer=" + acquirer + ", createMillis=" + createMillis
-				+ ", cardSecret=" + cardSecret + ", bankTransactionTime=" + bankTransactionTime + ", cardInfo="
-				+ cardInfo + "]";
+		return "PayByPrimeResponse [status=" + status + ", message=" + message + ", recTradeId=" + recTradeId
+				+ ", orderId=" + orderId + ", authCode=" + authCode + ", acquirer=" + acquirer + ", createMillis="
+				+ createMillis + ", cardSecret=" + cardSecret + ", bankTransactionTime=" + bankTransactionTime
+				+ ", bankResultCode=" + bankResultCode + ", bankResultMsg=" + bankResultMsg + ", cardInfo=" + cardInfo
+				+ "]";
 	}
 
 }
