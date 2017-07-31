@@ -7,6 +7,10 @@ import com.tappay.request.TapPayRequest;
 import com.tappay.service.TapPay;
 import com.tappay.utils.StringUtil;
 
+/**
+ * PayByTokenRequest is employed to send a PayByToken request.
+ *
+ */
 public class PayByTokenRequest extends TapPayRequest{
 
 	@SerializedName("cardkey")
@@ -155,61 +159,110 @@ public class PayByTokenRequest extends TapPayRequest{
 		private String orderId;
 		private String cardCCV;
 
+		/**Set cardKey for PayByTokenRequest.
+		 * @param cardKey
+		 *
+		 */
 		public Builder cardKey(String cardKey) {
 			this.cardKey = cardKey;
 			return this;
 		}
 
+		/**Set cardToken for PayByTokenRequest.
+		 * @param cardToken
+		 * 
+		 */
 		public Builder cardToken(String cardToken) {
 			this.cardToken = cardToken;
 			return this;
 		}
 
+		/**Set merchantId for PayByTokenRequest.
+		 * @param merchantId
+		 * 
+		 */
 		public Builder merchantId(String merchantId) {
 			this.merchantId = merchantId;
 			return this;
 		}
 
+		/**Set amount for PayByTokenRequest.
+		 * @param amount
+		 * 
+		 */
 		public Builder amount(Integer amount) {
 			this.amount = amount;
 			return this;
 		}
 
+		/**Set currency for PayByTokenRequest.
+		 * @param currency
+		 * 
+		 */
 		public Builder currency(String currency) {
 			this.currency = currency;
 			return this;
 		}
 
+		/**Set partnerTradeId for PayByTokenRequest.
+		 * @param partnerTradeId
+		 * 
+		 */
 		public Builder partnerTradeId(String partnerTradeId) {
 			this.partnerTradeId = partnerTradeId;
 			return this;
 		}
 
+		/**Set details for PayByTokenRequest.
+		 * @param details
+		 * 
+		 */
 		public Builder details(String details) {
 			this.details = details;
 			return this;
 		}
 
+		/**Set installment for PayByTokenRequest.
+		 * @param instalment
+		 * 
+		 */
 		public Builder instalment(Integer instalment) {
 			this.instalment = instalment;
 			return this;
 		}
 
+		/**Set authToCapPeriodInDay for PayByTokenRequest.
+		 * @param authToCapPeriodInDay
+		 * 
+		 */
 		public Builder authToCapPeriodInDay(Integer authToCapPeriodInDay) {
 			this.authToCapPeriodInDay = authToCapPeriodInDay;
 			return this;
 		}
 
+		/**Set orderId for PayByTokenRequest.
+		 * @param orderId
+		 * 
+		 */
 		public Builder orderId(String orderId) {
 			this.orderId = orderId;
 			return this;
 		}
 
+		/**Set prime for PayByTokenRequest.
+		 * @param cardCCV
+		 * @return
+		 */
 		public Builder cardCCV(String cardCCV) {
 			this.cardCCV = cardCCV;
 			return this;
 		}
 
+		/**Build PayByTokenRequest for sending PayByPrime request.
+		 * @return
+		 * @throws TapPayInitialException
+		 * @throws ArgumentsValidException
+		 */
 		public PayByTokenRequest build() throws ArgumentsValidException, TapPayInitialException {
 			if (StringUtil.isEmpty(cardKey)) {
 				throw new ArgumentsValidException("Missing Arguments : cardKey");

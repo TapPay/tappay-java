@@ -4,6 +4,11 @@ import com.tappay.exception.TapPayInitialException;
 import com.tappay.utils.StringUtil;
 import com.tappay.utils.TapPayEnvironment;
 
+/**
+ * In order to use TapPay back-end SDK, the apiKey and environment must be set.
+ * Otherwise, TapPayInitialException will be thrown when you access payment APIs.
+ *
+ */
 public class TapPay {
 
 	private String apiKey;
@@ -21,6 +26,11 @@ public class TapPay {
 		}
 	}
 
+	/**Initialize SDK with apiKey and set environment.
+	 * @param apiKey
+	 * @param environment
+	 * @throws TapPayInitialException
+	 */
 	public static void initial(String apiKey, TapPayEnvironment environment) throws TapPayInitialException {
 		if (StringUtil.isEmpty(apiKey)) {
 			throw new TapPayInitialException();
@@ -50,16 +60,28 @@ public class TapPay {
 		return environment;
 	}
 
+	/**Obtain a DirectPay object for sending PayByPrime or PayByToken request. 
+	 * @return DirectPay
+	 * @throws TapPayInitialException
+	 */
 	public static DirectPay createDirectPay() throws TapPayInitialException {
 		initialValidate();
 		return DirectPay.newInstance();
 	}
 
+	/**Obtain a Refund object for sending Refund request. 
+	 * @return Refund
+	 * @throws TapPayInitialException
+	 */
 	public static Refund createRefund() throws TapPayInitialException {
 		initialValidate();
 		return Refund.newInstance();
 	}
 	
+	/**Obtain a Record object for sending GetRecord request. 
+	 * @return Record
+	 * @throws TapPayInitialException
+	 */
 	public static Record createGetRecord() throws TapPayInitialException {
 		initialValidate();
 		return Record.newInstance();

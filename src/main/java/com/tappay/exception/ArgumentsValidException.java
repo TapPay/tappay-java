@@ -1,5 +1,9 @@
 package com.tappay.exception;
 
+/**
+ * ArgumentsValidException will be thrown if there is any incorrect argument be set.
+ *
+ */
 public class ArgumentsValidException extends Exception {
 
 	/**

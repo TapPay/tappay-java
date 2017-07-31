@@ -1,5 +1,9 @@
 package com.tappay.exception;
 
+/**
+ * TapPayServerConnectException will be thrown if there is any connective error.
+ *
+ */
 public class TapPayServerConnectException extends Exception {
 
 	/**

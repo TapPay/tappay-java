@@ -8,6 +8,10 @@ import com.tappay.request.TapPayRequest;
 import com.tappay.service.TapPay;
 import com.tappay.utils.StringUtil;
 
+/**
+ * PayByPrimeRequest is employed to send a PayByPrime request.
+ *
+ */
 public class PayByPrimeRequest extends TapPayRequest {
 
 	private String prime;
@@ -57,61 +61,110 @@ public class PayByPrimeRequest extends TapPayRequest {
 		private Boolean remember;
 		private Cardholder cardholder;
 
+		/**Set prime for PayByPrimeRequest.
+		 * @param prime
+		 * 
+		 */
 		public Builder prime(String prime) {
 			this.prime = prime;
 			return this;
 		}
 
+		/**Set merchantId for PayByPrimeRequest.
+		 * @param merchantId
+		 * 
+		 */
 		public Builder merchantId(String merchantId) {
 			this.merchantId = merchantId;
 			return this;
 		}
 
+		/**Set currency for PayByPrimeRequest.
+		 * @param currency
+		 * 
+		 */
 		public Builder currency(String currency) {
 			this.currency = currency;
 			return this;
 		}
 
+		/**Set partnerTradeId for PayByPrimeRequest.
+		 * @param partnerTradeId
+		 * 
+		 */
 		public Builder partnerTradeId(String partnerTradeId) {
 			this.partnerTradeId = partnerTradeId;
 			return this;
 		}
 
+		/**Set orderId for PayByPrimeRequest.
+		 * @param orderId
+		 * 
+		 */
 		public Builder orderId(String orderId) {
 			this.orderId = orderId;
 			return this;
 		}
 
+		/**Set details for PayByPrimeRequest.
+		 * @param details
+		 * 
+		 */
 		public Builder details(String details) {
 			this.details = details;
 			return this;
 		}
 
+		/**Set amount for PayByPrimeRequest.
+		 * @param amount
+		 * 
+		 */
 		public Builder amount(Integer amount) {
 			this.amount = amount;
 			return this;
 		}
 
+		/**Set installment for PayByPrimeRequest.
+		 * @param instalment
+		 * 
+		 */
 		public Builder instalment(Integer instalment) {
 			this.instalment = instalment;
 			return this;
 		}
 
+		/**Set authToCapPeriodInDay for PayByPrimeRequest.
+		 * @param authToCapPeriodInDay
+		 * 
+		 */
 		public Builder authToCapPeriodInDay(Integer authToCapPeriodInDay) {
 			this.authToCapPeriodInDay = authToCapPeriodInDay;
 			return this;
 		}
 
+		/**Set cardHolder for PayByPrimeRequest.
+		 * @param cardholder
+		 * 
+		 */
 		public Builder cardholder(Cardholder cardholder) {
 			this.cardholder = cardholder;
 			return this;
 		}
 
+		/**Set remember for PayByPrimeRequest.
+		 * @param remember
+		 * 
+		 */
 		public Builder remember(Boolean remember) {
 			this.remember = remember;
 			return this;
 		}
 
+		/**Build PayByPrimeRequest for sending PayByPrime request.
+		 * @return
+		 * @throws TapPayInitialException
+		 * @throws ArgumentsValidException
+		 */
 		public PayByPrimeRequest build() throws TapPayInitialException, ArgumentsValidException {
 			if (StringUtil.isEmpty(merchantId)) {
 				throw new ArgumentsValidException("Missing Arguments : MerchantId");

@@ -1,5 +1,9 @@
 package com.tappay.exception;
 
+/**
+ * TapPayInitialException will be thrown if TapPay SDK isn't initialized properly.
+ *
+ */
 public class TapPayInitialException extends Exception {
 
 	/**

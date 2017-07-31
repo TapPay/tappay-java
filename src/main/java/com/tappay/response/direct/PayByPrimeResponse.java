@@ -6,6 +6,10 @@ import com.tappay.response.CardInfo;
 import com.tappay.response.CardSecret;
 import com.tappay.response.TapPayResponse;
 
+/**
+ * Use PayByPrimeResponse to retrieve PayByPrime response data from TapPay.
+ *
+ */
 public class PayByPrimeResponse extends TapPayResponse {
 
 	@SerializedName("rectradeid")

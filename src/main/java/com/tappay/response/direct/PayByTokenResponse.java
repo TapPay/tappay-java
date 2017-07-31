@@ -1,10 +1,14 @@
 package com.tappay.response.direct;
 
 import com.google.gson.annotations.SerializedName;
+
 import com.tappay.response.BankTransactionTime;
 import com.tappay.response.CardInfo;
 import com.tappay.response.TapPayResponse;
-
+/**
+ * Use PayByTokenResponse to retrieve PayByToken response data from TapPay.
+ *
+ */
 public class PayByTokenResponse extends TapPayResponse {
 
 	@SerializedName("rectradeid")

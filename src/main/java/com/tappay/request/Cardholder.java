@@ -4,6 +4,10 @@ import com.google.gson.annotations.SerializedName;
 import com.tappay.exception.ArgumentsValidException;
 import com.tappay.utils.StringUtil;
 
+/**
+ * CardHolder contains card holder's information. PhoneNumber, Name and Email are mandatory for PayByPrime and PayByToken API.
+ *
+ */
 public class Cardholder {
 
 	@SerializedName("phonenumber")
@@ -48,31 +52,55 @@ public class Cardholder {
 			return new Cardholder(this);
 		}
 
+		/**Set phoneNumber for CardHolder.
+		 * @param phoneNumber
+		 *
+		 */
 		public Builder phoneNumber(String phoneNumber) {
 			this.phoneNumber = phoneNumber;
 			return this;
 		}
 
+		/**Set name for CardHolder.
+		 * @param name
+		 * 
+		 */
 		public Builder name(String name) {
 			this.name = name;
 			return this;
 		}
 
+		/**Set email for CardHolder.
+		 * @param email
+		 *
+		 */
 		public Builder email(String email) {
 			this.email = email;
 			return this;
 		}
 
+		/**Set zipCode for CardHolder.
+		 * @param zipCode
+		 * 
+		 */
 		public Builder zipCode(String zipCode) {
 			this.zipCode = zipCode;
 			return this;
 		}
 
+		/**Set address for CardHolder.
+		 * @param address
+		 * 
+		 */
 		public Builder address(String address) {
 			this.address = address;
 			return this;
 		}
 
+		/**Set nationalId for CardHolder.
+		 * @param nationalId
+		 * 
+		 */
 		public Builder nationalId(String nationalId) {
 			this.nationalId = nationalId;
 			return this;

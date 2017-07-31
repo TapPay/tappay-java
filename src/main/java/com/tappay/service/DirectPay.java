@@ -9,6 +9,10 @@ import com.tappay.response.direct.PayByPrimeResponse;
 import com.tappay.response.direct.PayByTokenResponse;
 import com.tappay.utils.ApiRequestUtil;
 
+/**
+ * DirectPay is used to send request regarding diretPay, which is one of the payment type in TapPay.
+ *
+ */
 public class DirectPay {
 
 	private static final String SANDBOX_PAY_BY_PRIME_URL = "https://sandbox.tappayapis.com/tpc/partner/directpay/paybyprime";
@@ -23,6 +27,12 @@ public class DirectPay {
 		return new DirectPay();
 	}
 
+	/**Send PayByPrime request to TapPay server.
+	 * @param request
+	 * @return PayByPrimeResponse
+	 * @throws TapPayInitialException
+	 * @throws TapPayServerConnectException
+	 */
 	public PayByPrimeResponse payByPrime(PayByPrimeRequest request)
 			throws TapPayInitialException, TapPayServerConnectException {
 		String responseJson = ApiRequestUtil.postJson(request.toJson(), getPayByPrimeUrl(),
@@ -41,6 +51,12 @@ public class DirectPay {
 		}
 	}
 
+	/**Send PayByToken request to TapPay server.
+	 * @param request
+	 * @return PayByTokenResponse
+	 * @throws TapPayInitialException
+	 * @throws TapPayServerConnectException
+	 */
 	public PayByTokenResponse payByToken(PayByTokenRequest request)
 			throws TapPayInitialException, TapPayServerConnectException {
 		String responseJson = ApiRequestUtil.postJson(request.toJson(), getPayByTokenUrl(),
