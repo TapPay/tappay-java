@@ -28,7 +28,7 @@ public class DirectPay {
 	}
 
 	/**Send PayByPrime request to TapPay server.
-	 * @param request
+	 * @param PayByPrimeRequest
 	 * @return PayByPrimeResponse
 	 * @throws TapPayInitialException
 	 * @throws TapPayServerConnectException
@@ -52,7 +52,7 @@ public class DirectPay {
 	}
 
 	/**Send PayByToken request to TapPay server.
-	 * @param request
+	 * @param PayByTokenRequest
 	 * @return PayByTokenResponse
 	 * @throws TapPayInitialException
 	 * @throws TapPayServerConnectException

@@ -7,6 +7,10 @@ import com.tappay.request.refund.RefundRequest;
 import com.tappay.response.refund.RefundResponse;
 import com.tappay.utils.ApiRequestUtil;
 
+/**
+ * Refund is used to send Refund request to TayPay.
+ * 
+ */
 public class Refund {
 
 	private static final String SANDBOX_REFUND_URL = "https://sandbox.tappayapis.com/tpc/partner/fastrefund";
@@ -18,6 +22,12 @@ public class Refund {
 		return new Refund();
 	}
 
+	/**Send Refund request to TapPay server.
+	 * @param RefundRequest
+	 * @return RefundResponse
+	 * @throws TapPayServerConnectException
+	 * @throws TapPayInitialException
+	 */
 	public RefundResponse refund(RefundRequest request) throws TapPayServerConnectException, TapPayInitialException {
 		String responseJson = ApiRequestUtil.postJson(request.toJson(), getRefundUrl(),
 				TapPay.getInstance().getApiKey());

@@ -2,6 +2,10 @@ package com.tappay.request.record;
 
 import com.google.gson.annotations.SerializedName;
 
+/**
+ * GetRecordFiltersTime is used to add filter of time interval in GetRecordFilters.
+ *
+ */
 public class GetRecordFiltersTime {
 
 	@SerializedName("starttime")
@@ -9,6 +13,10 @@ public class GetRecordFiltersTime {
 	@SerializedName("endtime")
 	private Long endTimeMillis;
 
+	/**Create a filter containing time interval.
+	 * @param startTimeMillis
+	 * @param endTimeMillis
+	 */
 	public GetRecordFiltersTime(Long startTimeMillis, Long endTimeMillis) {
 		this.startTimeMillis = startTimeMillis;
 		this.endTimeMillis = endTimeMillis;

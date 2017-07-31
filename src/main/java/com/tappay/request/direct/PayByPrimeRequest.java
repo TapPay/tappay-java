@@ -161,7 +161,7 @@ public class PayByPrimeRequest extends TapPayRequest {
 		}
 
 		/**Build PayByPrimeRequest for sending PayByPrime request.
-		 * @return
+		 * @return PayByPrimeRequest
 		 * @throws TapPayInitialException
 		 * @throws ArgumentsValidException
 		 */

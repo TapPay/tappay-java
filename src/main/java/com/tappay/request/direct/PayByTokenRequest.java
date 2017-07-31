@@ -258,8 +258,8 @@ public class PayByTokenRequest extends TapPayRequest{
 			return this;
 		}
 
-		/**Build PayByTokenRequest for sending PayByPrime request.
-		 * @return
+		/**Build PayByTokenRequest for sending PayByToken request.
+		 * @return PayByTokenRequest
 		 * @throws TapPayInitialException
 		 * @throws ArgumentsValidException
 		 */

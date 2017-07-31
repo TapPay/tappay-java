@@ -7,6 +7,10 @@ import com.tappay.request.record.RecordRequest;
 import com.tappay.response.record.RecordResponse;
 import com.tappay.utils.ApiRequestUtil;
 
+/**
+ * Record is used to send GetRecord request to TayPay.
+ *
+ */
 public class Record {
 
 	private static final String SANDBOX_GET_RECORD_URL = "https://sandbox.tappayapis.com/tpc/partner/getrecordsplus";
@@ -18,6 +22,12 @@ public class Record {
 		return new Record();
 	}
 
+	/**Send GetRecord request to TapPay server.
+	 * @param RecordRequest
+	 * @return RecordResponse
+	 * @throws TapPayServerConnectException
+	 * @throws TapPayInitialException
+	 */
 	public RecordResponse getRecord(RecordRequest request) throws TapPayServerConnectException, TapPayInitialException {
 		String responseJson = ApiRequestUtil.postJson(request.toJson(), getRecordUrl(),
 				TapPay.getInstance().getApiKey());

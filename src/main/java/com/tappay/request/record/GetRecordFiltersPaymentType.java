@@ -2,6 +2,10 @@ package com.tappay.request.record;
 
 import com.google.gson.annotations.SerializedName;
 
+/**
+ * GetRecordFiltersPaymentType is used to add filter of payment type in GetRecordFilters.
+ *
+ */
 public class GetRecordFiltersPaymentType {
 
 	@SerializedName("directpay")
@@ -47,21 +51,33 @@ public class GetRecordFiltersPaymentType {
 		private Boolean applePay = false;
 		private Boolean androidPay = false;
 
+		/**Get direct-pay record if this filter is added in GetRecordFilters.
+		 * @return
+		 */
 		public Builder directPay() {
 			this.directPay = true;
 			return this;
 		}
 
+		/**Get applePay record if this filter is added in GetRecordFilters.
+		 * @return
+		 */
 		public Builder applePay() {
 			this.applePay = true;
 			return this;
 		}
 
+		/**Get androidPay record if this filter is added in GetRecordFilters.
+		 * @return
+		 */
 		public Builder androidPay() {
 			this.androidPay = true;
 			return this;
 		}
 
+		/**Build GetRecordFiltersPaymentType for adding filter in payment type in GetRecord API.
+		 * @return GetRecordFiltersPaymentType
+		 */
 		public GetRecordFiltersPaymentType build() {
 			return new GetRecordFiltersPaymentType(this);
 		}

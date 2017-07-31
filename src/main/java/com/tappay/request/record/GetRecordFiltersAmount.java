@@ -3,6 +3,10 @@ package com.tappay.request.record;
 
 import com.google.gson.annotations.SerializedName;
 
+/**
+ * GetRecordFiltersAmount is used to add filter of amount interval in GetRecordFilters.
+ *
+ */
 public class GetRecordFiltersAmount {
 
 	@SerializedName("upperlimit")
@@ -10,6 +14,10 @@ public class GetRecordFiltersAmount {
 	@SerializedName("lowerlimit")
 	private Integer lowerLimit;
 	
+	/**Create a filter containing amount interval.
+	 * @param upperLimit
+	 * @param lowerLimit
+	 */
 	public GetRecordFiltersAmount(Integer upperLimit, Integer lowerLimit){
 		this.upperLimit = upperLimit;
 		this.lowerLimit = lowerLimit;

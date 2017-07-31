@@ -6,6 +6,10 @@ import com.tappay.exception.TapPayInitialException;
 import com.tappay.request.TapPayRequest;
 import com.tappay.service.TapPay;
 
+/**
+ * RecordRequest is employed to send a GetRecord request.
+ *
+ */
 public class RecordRequest extends TapPayRequest {
 
 	@SerializedName("partnerkey")
@@ -72,26 +76,47 @@ public class RecordRequest extends TapPayRequest {
 		GetRecordFilters filters;
 		GetRecordOrderBy orderBy;
 
+		/**Set recordsPerPage for RecordRequest.
+		 * @param recordsPerPage
+		 * 
+		 */
 		public Builder recordsPerPage(Integer recordsPerPage) {
 			this.recordsPerPage = recordsPerPage;
 			return this;
 		}
 
+		/**Set page for RecordRequest.
+		 * @param page
+		 * 
+		 */
 		public Builder page(Integer page) {
 			this.page = page;
 			return this;
 		}
 
+		/**Set GetRecordFilters for RecordRequest.
+		 * @param GetRecordFilters
+		 * 
+		 */
 		public Builder filters(GetRecordFilters filters) {
 			this.filters = filters;
 			return this;
 		}
 
+		/**Set GetRecordOrderBy for RecordRequest.
+		 * @param GetRecordOrderBy
+		 * 
+		 */
 		public Builder orderBy(GetRecordOrderBy orderBy) {
 			this.orderBy = orderBy;
 			return this;
 		}
 
+		/**Build RecordRequest for sending GetRecord request.
+		 * @return RecordRequest
+		 * @throws TapPayInitialException
+		 * @throws ArgumentsValidException
+		 */
 		public RecordRequest build() throws TapPayInitialException, ArgumentsValidException {
 			if (filters != null) {
 				if (filters.getAmount() != null

@@ -7,6 +7,11 @@ import com.tappay.request.TapPayRequest;
 import com.tappay.service.TapPay;
 import com.tappay.utils.StringUtil;
 
+
+/**
+ * RefundRequest is employed to send a Refund request.
+ *
+ */
 public class RefundRequest extends TapPayRequest {
 
 	@SerializedName("partnerkey")
@@ -23,6 +28,11 @@ public class RefundRequest extends TapPayRequest {
 
 		private String recordId;
 
+		/**Build RefundRequest for sending Refund request.
+		 * @return RefundRequest
+		 * @throws TapPayInitialException
+		 * @throws ArgumentsValidException
+		 */
 		public RefundRequest build() throws TapPayInitialException, ArgumentsValidException {
 			if (StringUtil.isEmpty(recordId)) {
 				throw new ArgumentsValidException("Miss Arguments : recordId");
@@ -30,6 +40,10 @@ public class RefundRequest extends TapPayRequest {
 			return new RefundRequest(this);
 		}
 
+		/**Set recordId for RefundRequest.
+		 * @param recordId
+		 * 
+		 */
 		public Builder recordId(String recordId) {
 			this.recordId = recordId;
 			return this;

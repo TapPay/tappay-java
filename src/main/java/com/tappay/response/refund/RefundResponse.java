@@ -3,6 +3,10 @@ package com.tappay.response.refund;
 import com.google.gson.annotations.SerializedName;
 import com.tappay.response.TapPayResponse;
 
+/**
+ * Use RefundResponse to retrieve Refund response data from TapPay.
+ *
+ */
 public class RefundResponse extends TapPayResponse {
 
 	@SerializedName("refundamount")

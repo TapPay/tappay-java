@@ -3,6 +3,10 @@ package com.tappay.request.record;
 import java.util.List;
 import com.google.gson.annotations.SerializedName;
 
+/**
+ * GetRecordFilters is used to add GetRecordFiltersTime, GetRecordFiltersAmount and GetRecordFiltersPaymentType in RecordRequest.
+ *
+ */
 public class GetRecordFilters {
 
 	public enum RecordStatus {
@@ -123,46 +127,81 @@ public class GetRecordFilters {
 		private String recTradeId;
 		private String orderId;
 
+		/**Set GetRecordFiltersTime for GetRecordFilters.
+		 * @param time
+		 * 
+		 */
 		public Builder time(GetRecordFiltersTime time) {
 			this.time = time;
 			return this;
 		}
 
+		/**Set GetRecordFiltersPaymentType for GetRecordFilters.
+		 * @param paymentType
+		 * 
+		 */
 		public Builder paymentType(GetRecordFiltersPaymentType paymentType) {
 			this.paymentType = paymentType;
 			return this;
 		}
 
+		/**Set GetRecordFiltersAmount for GetRecordFilters.
+		 * @param amount
+		 * 
+		 */
 		public Builder amount(GetRecordFiltersAmount amount) {
 			this.amount = amount;
 			return this;
 		}
 
+		/**Set appId for GetRecordFilters.
+		 * @param appId
+		 * 
+		 */
 		public Builder appId(List<String> appId) {
 			this.appId = appId;
 			return this;
 		}
 
+		/**Set merchantId for GetRecordFilters.
+		 * @param merchantId
+		 * 
+		 */
 		public Builder merchantId(List<String> merchantId) {
 			this.merchantId = merchantId;
 			return this;
 		}
 
+		/**Set recordStatus for GetRecordFilters.
+		 * @param recordStatus
+		 * 
+		 */
 		public Builder recordStatus(RecordStatus recordStatus) {
 			this.recordStatus = recordStatus;
 			return this;
 		}
 
+		/**Set recTradeId for GetRecordFilters.
+		 * @param recTradeId
+		 * 
+		 */
 		public Builder recTradeId(String recTradeId) {
 			this.recTradeId = recTradeId;
 			return this;
 		}
 
+		/**Set orderId for GetRecordFilters.
+		 * @param orderId
+		 * 
+		 */
 		public Builder orderId(String orderId) {
 			this.orderId = orderId;
 			return this;
 		}
 
+		/**Build GetRecordFilters for adding filters to RecordRequest.
+		 * @return GetRecordFilters
+		 */
 		public GetRecordFilters build() {
 			return new GetRecordFilters(this);
 		}

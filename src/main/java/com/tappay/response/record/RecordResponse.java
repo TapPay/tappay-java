@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import com.google.gson.annotations.SerializedName;
 import com.tappay.response.TapPayResponse;
 
+/**
+ * Use RecordResponse to retrieve GetRecord response data from TapPay.
+ *
+ */
 public class RecordResponse extends TapPayResponse {
 
 	@SerializedName("recordsperpage")
