@@ -10,25 +10,25 @@ import com.tappay.utils.StringUtil;
 public class PayByTokenRequest extends TapPayRequest{
 
 	@SerializedName("cardkey")
-	String cardKey;
+	private String cardKey;
 	@SerializedName("cardtoken")
-	String cardToken;
+	private String cardToken;
 	@SerializedName("partnerkey")
-	String partnerKey;
+	private String partnerKey;
 	@SerializedName("merchantid")
-	String merchantId;
-	Integer amount;
-	String currency;
+	private String merchantId;
+	private Integer amount;
+	private String currency;
 	@SerializedName("ptradeid")
-	String partnerTradeId;
-	String details;
-	Integer instalment;
+	private String partnerTradeId;
+	private String details;
+	private Integer instalment;
 	@SerializedName("authtocapperiodinday")
-	Integer authToCapPeriodInDay;
+	private Integer authToCapPeriodInDay;
 	@SerializedName("orderid")
-	String orderId;
+	private String orderId;
 	@SerializedName("cardccv")
-	String cardCCV;
+	private String cardCCV;
 
 	private PayByTokenRequest(Builder builder) throws TapPayInitialException {
 		this.partnerKey = TapPay.getInstance().getApiKey();
@@ -145,7 +145,6 @@ public class PayByTokenRequest extends TapPayRequest{
 
 		private String cardKey;
 		private String cardToken;
-		private String partnerKey;
 		private String merchantId;
 		private Integer amount;
 		private String currency = "TWD";
@@ -163,11 +162,6 @@ public class PayByTokenRequest extends TapPayRequest{
 
 		public Builder cardToken(String cardToken) {
 			this.cardToken = cardToken;
-			return this;
-		}
-
-		public Builder partnerKey(String partnerKey) {
-			this.partnerKey = partnerKey;
 			return this;
 		}
 
@@ -227,7 +221,7 @@ public class PayByTokenRequest extends TapPayRequest{
 				throw new ArgumentsValidException("Missing Arguments : MerchantId");
 			}
 			if (StringUtil.isEmpty(details)) {
-				throw new ArgumentsValidException("Missing Arguments : MerchantId");
+				throw new ArgumentsValidException("Missing Arguments : details");
 			}
 			return new PayByTokenRequest(this);
 		}

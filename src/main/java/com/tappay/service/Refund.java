@@ -9,8 +9,8 @@ import com.tappay.utils.ApiRequestUtil;
 
 public class Refund {
 
-	private static final String SANDBOX_PAY_BY_PRIME_URL = "https://sandbox.tappayapis.com/tpc/partner/fastrefund";
-	private static final String PRODUCTION_PAY_BY_PRIME_URL = "https://prod.tappayapis.com/tpc/partner/fastrefund";
+	private static final String SANDBOX_REFUND_URL = "https://sandbox.tappayapis.com/tpc/partner/fastrefund";
+	private static final String PRODUCTION_REFUND_URL = "https://prod.tappayapis.com/tpc/partner/fastrefund";
 
 	private Refund() {}
 
@@ -27,9 +27,9 @@ public class Refund {
 	private String getRefundUrl() throws TapPayInitialException {
 		switch (TapPay.getInstance().getEnvironment()) {
 			case PRODUCTION:
-				return PRODUCTION_PAY_BY_PRIME_URL;
+				return PRODUCTION_REFUND_URL;
 			case SANDBOX:
-				return SANDBOX_PAY_BY_PRIME_URL;
+				return SANDBOX_REFUND_URL;
 			default:
 				throw new TapPayInitialException();
 		}

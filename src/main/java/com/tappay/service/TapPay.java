@@ -59,5 +59,10 @@ public class TapPay {
 		initialValidate();
 		return Refund.newInstance();
 	}
+	
+	public static Record createGetRecord() throws TapPayInitialException {
+		initialValidate();
+		return Record.newInstance();
+	}
 
 }

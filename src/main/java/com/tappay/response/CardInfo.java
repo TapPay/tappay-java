@@ -11,6 +11,10 @@ public class CardInfo {
 	private String issuer;
 	private int funding;
 	private int type;
+	private String level;
+	private String country;
+	@SerializedName("countrycode")
+	String countryCode;
 
 	public String getBinCode() {
 		return binCode;
@@ -52,10 +56,34 @@ public class CardInfo {
 		this.type = type;
 	}
 
+	public String getLevel() {
+		return level;
+	}
+
+	public void setLevel(String level) {
+		this.level = level;
+	}
+
+	public String getCountry() {
+		return country;
+	}
+
+	public void setCountry(String country) {
+		this.country = country;
+	}
+
+	public String getCountryCode() {
+		return countryCode;
+	}
+
+	public void setCountryCode(String countryCode) {
+		this.countryCode = countryCode;
+	}
+
 	@Override
 	public String toString() {
 		return "CardInfo [binCode=" + binCode + ", lastFour=" + lastFour + ", issuer=" + issuer + ", funding=" + funding
-				+ ", type=" + type + "]";
+				+ ", type=" + type + ", level=" + level + ", country=" + country + ", countryCode=" + countryCode + "]";
 	}
 
 }

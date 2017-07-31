@@ -120,7 +120,7 @@ public class PayByPrimeRequest extends TapPayRequest {
 				throw new ArgumentsValidException("Missing Arguments : Prime");
 			}
 			if (StringUtil.isEmpty(details)) {
-				throw new ArgumentsValidException("Missing Arguments : MerchantId");
+				throw new ArgumentsValidException("Missing Arguments : details");
 			}
 			if (cardholder == null) {
 				throw new ArgumentsValidException("Missing Arguments : Cardholder");
