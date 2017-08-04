@@ -73,7 +73,7 @@ public class RefundExample {
 }
 ```
 
-##GetRecord Usage
+## GetRecord Usage
 ```java
 import com.tappay.exception.ArgumentsValidException;
 import com.tappay.exception.TapPayInitialException;
