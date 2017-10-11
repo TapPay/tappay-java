@@ -17,10 +17,22 @@ public class DirectPayByPrimeExample {
 	public static void main(String[] args)
 			throws TapPayInitialException, ArgumentsValidException, TapPayServerConnectException {
 		TapPay.initial("Your partner key", TapPayEnvironment.SANDBOX);
-		Cardholder cardholder = new Cardholder.Builder().email("support@cherri.tech").name("tappay").phoneNumber("").build();
-		PayByPrimeRequest request = new PayByPrimeRequest.Builder().amount(1).authToCapPerionInDay(0).currency("TWD")
-				.instalment(0).details("Item Details").merchantId("Your Merchant Id").remember(true).cardholder(cardholder)
-				.prime("From get prime api").build();
+		Cardholder cardholder = new Cardholder.Builder()
+			.email("support@cherri.tech")
+			.name("tappay")
+			.phoneNumber("")
+			.build();
+		PayByPrimeRequest request = new PayByPrimeRequest.Builder()
+			.amount(1)
+			.authToCapPerionInDay(0)
+			.currency("TWD")
+			.instalment(0)
+			.details("Item Details")
+			.merchantId("Your Merchant Id")
+			.remember(true) // 是否記憶卡號，Apple Pay 及 Android Pay 不用填寫
+			.cardholder(cardholder)
+			.prime("From get prime api")
+			.build();
 		PayByPrimeResponse response = TapPay.createDirectPay().payByPrime(request);
 		System.out.println(response);
 	}
