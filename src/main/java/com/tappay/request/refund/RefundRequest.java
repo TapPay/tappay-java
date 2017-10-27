@@ -7,17 +7,17 @@ import com.tappay.request.TapPayRequest;
 import com.tappay.service.TapPay;
 import com.tappay.utils.StringUtil;
 
-
 /**
  * RefundRequest is employed to send a Refund request.
  *
  */
 public class RefundRequest extends TapPayRequest {
 
-	@SerializedName("partnerkey")
+	@SerializedName("partner_key")
 	private String partnerKey;
-	@SerializedName("rectradeid")
+	@SerializedName("rec_trade_id")
 	private String recordId;
+	private Integer amount;
 
 	private RefundRequest(Builder builder) throws TapPayInitialException {
 		this.partnerKey = TapPay.getInstance().getApiKey();
@@ -28,7 +28,9 @@ public class RefundRequest extends TapPayRequest {
 
 		private String recordId;
 
-		/**Build RefundRequest for sending Refund request.
+		/**
+		 * Build RefundRequest for sending Refund request.
+		 * 
 		 * @return RefundRequest
 		 * @throws TapPayInitialException
 		 * @throws ArgumentsValidException
@@ -40,7 +42,9 @@ public class RefundRequest extends TapPayRequest {
 			return new RefundRequest(this);
 		}
 
-		/**Set recordId for RefundRequest.
+		/**
+		 * Set recordId for RefundRequest.
+		 * 
 		 * @param recordId
 		 * 
 		 */
@@ -66,9 +70,17 @@ public class RefundRequest extends TapPayRequest {
 		this.recordId = recordId;
 	}
 
+	public Integer getAmount() {
+		return amount;
+	}
+
+	public void setAmount(Integer amount) {
+		this.amount = amount;
+	}
+
 	@Override
 	public String toString() {
-		return "RefundRequest [partnerKey=" + partnerKey + ", recordId=" + recordId + "]";
+		return "RefundRequest [partnerKey=" + partnerKey + ", recordId=" + recordId + ", amount=" + amount + " ]";
 	}
 
 }
