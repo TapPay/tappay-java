@@ -4,7 +4,7 @@ import com.google.gson.Gson;
 import com.tappay.exception.TapPayInitialException;
 import com.tappay.exception.TapPayServerConnectException;
 import com.tappay.request.cap.CapRequest;
-import com.tappay.response.refund.RefundResponse;
+import com.tappay.response.cap.CapResponse;
 import com.tappay.utils.ApiRequestUtil;
 
 public class Cap {
@@ -26,9 +26,9 @@ public class Cap {
 	 * @throws TapPayServerConnectException
 	 * @throws TapPayInitialException
 	 */
-	public RefundResponse refund(CapRequest request) throws TapPayServerConnectException, TapPayInitialException {
+	public CapResponse refund(CapRequest request) throws TapPayServerConnectException, TapPayInitialException {
 		String responseJson = ApiRequestUtil.postJson(request.toJson(), getCapUrl(), TapPay.getInstance().getApiKey());
-		return new Gson().fromJson(responseJson, RefundResponse.class);
+		return new Gson().fromJson(responseJson, CapResponse.class);
 	}
 
 	private String getCapUrl() throws TapPayInitialException {
