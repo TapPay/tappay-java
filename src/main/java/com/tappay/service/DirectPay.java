@@ -15,11 +15,11 @@ import com.tappay.utils.ApiRequestUtil;
  */
 public class DirectPay {
 
-	private static final String SANDBOX_PAY_BY_PRIME_URL = "https://sandbox.tappayapis.com/tpc/partner/directpay/paybyprime";
-	private static final String PRODUCTION_PAY_BY_PRIME_URL = "https://prod.tappayapis.com/tpc/partner/directpay/paybyprime";
+	private static final String SANDBOX_PAY_BY_PRIME_URL = "https://sandbox.tappayapis.com/tpc/payment/pay-by-prime";
+	private static final String PRODUCTION_PAY_BY_PRIME_URL = "https://prod.tappayapis.com/tpc/payment/pay-by-prime";
 
-	private static final String SANDBOX_PAY_BY_TOKEN_URL = "https://sandbox.tappayapis.com/tpc/partner/directpay/paybytoken";
-	private static final String PRODUCTION_PAY_BY_TOKEN_URL = "https://prod.tappayapis.com/tpc/partner/directpay/paybytoken";
+	private static final String SANDBOX_PAY_BY_TOKEN_URL = "https://sandbox.tappayapis.com/tpc/payment/pay-by-token";
+	private static final String PRODUCTION_PAY_BY_TOKEN_URL = "https://prod.tappayapis.com/tpc/payment/pay-by-token";
 
 	private DirectPay() {}
 
