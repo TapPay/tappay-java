@@ -13,8 +13,8 @@ import com.tappay.utils.ApiRequestUtil;
  */
 public class Refund {
 
-	private static final String SANDBOX_REFUND_URL = "https://sandbox.tappayapis.com/tpc/partner/fastrefund";
-	private static final String PRODUCTION_REFUND_URL = "https://prod.tappayapis.com/tpc/partner/fastrefund";
+	private static final String SANDBOX_REFUND_URL = "https://sandbox.tappayapis.com/tpc/transaction/refund";
+	private static final String PRODUCTION_REFUND_URL = "https://prod.tappayapis.com/tpc/transaction/refund";
 
 	private Refund() {}
 
