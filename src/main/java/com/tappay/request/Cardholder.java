@@ -10,15 +10,15 @@ import com.tappay.utils.StringUtil;
  */
 public class Cardholder {
 
-	@SerializedName("phonenumber")
+	@SerializedName("phone_number")
 	private String phoneNumber;
 	private String name;
 	private String email;
-	@SerializedName("zip")
+	@SerializedName("zip_code")
 	private String zipCode;
-	@SerializedName("addr")
+	@SerializedName("address")
 	private String address;
-	@SerializedName("nationalid")
+	@SerializedName("national_id")
 	private String nationalId;
 
 	public Cardholder(Builder builder) {

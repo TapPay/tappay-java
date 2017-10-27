@@ -15,19 +15,19 @@ import com.tappay.utils.StringUtil;
 public class PayByPrimeRequest extends TapPayRequest {
 
 	private String prime;
-	@SerializedName("partnerkey")
+	@SerializedName("partner_key")
 	private String partnerKey;
-	@SerializedName("merchantid")
+	@SerializedName("merchant_id")
 	private String merchantId;
 	private Integer amount;
 	private String currency;
-	@SerializedName("ptradeid")
+	@SerializedName("order_number")
 	private String partnerTradeId;
-	@SerializedName("orderid")
+	@SerializedName("bank_transaction_id")
 	private String orderId;
 	private String details;
 	private Integer instalment;
-	@SerializedName("authtocapperiodinday")
+	@SerializedName("delay_capture_in_days")
 	private Integer authToCapPeriodInDay;
 	private Boolean remember;
 	private Cardholder cardholder;
