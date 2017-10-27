@@ -12,13 +12,13 @@ import com.tappay.service.TapPay;
  */
 public class RecordRequest extends TapPayRequest {
 
-	@SerializedName("partnerkey")
+	@SerializedName("partner_key")
 	private String partnerKey;
-	@SerializedName("recordsperpage")
+	@SerializedName("records_per_page")
 	private Integer recordsPerPage;
 	private Integer page;
 	private GetRecordFilters filters;
-	@SerializedName("orderby")
+	@SerializedName("order_by")
 	private GetRecordOrderBy orderBy;
 
 	private RecordRequest(Builder builder) throws TapPayInitialException {

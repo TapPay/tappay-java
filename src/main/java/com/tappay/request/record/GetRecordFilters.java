@@ -4,41 +4,39 @@ import java.util.List;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * GetRecordFilters is used to add GetRecordFiltersTime, GetRecordFiltersAmount and GetRecordFiltersPaymentType in RecordRequest.
+ * GetRecordFilters is used to add GetRecordFiltersTime, GetRecordFiltersAmount and GetRecordFiltersPaymentType in
+ * RecordRequest.
  *
  */
 public class GetRecordFilters {
 
 	public enum RecordStatus {
-		ERROR(-1),
-        AUTH(0),
-        OK(0),
-        PARTIALREFUNDED(2),
-        REFUNDED(3);
-        
-        private final int value;
+		ERROR(-1), AUTH(0), OK(0), PARTIALREFUNDED(2), REFUNDED(3);
+
+		private final int value;
 
 		RecordStatus(final int newValue) {
-            value = newValue;
-        }
+			value = newValue;
+		}
 
-        public int getValue() { return value; }
-    }
+		public int getValue() {
+			return value;
+		}
+	}
 
-	
 	private GetRecordFiltersTime time;
-	@SerializedName("paymenttype")
+	@SerializedName("payment_type")
 	private GetRecordFiltersPaymentType paymentType;
 	private GetRecordFiltersAmount amount;
-	@SerializedName("appid")
+	@SerializedName("app_id")
 	private List<String> appId;
-	@SerializedName("merchantid")
+	@SerializedName("merchant_id")
 	private List<String> merchantId;
-	@SerializedName("recordstatus")
+	@SerializedName("record_status")
 	private Integer recordStatus;
-	@SerializedName("rectradeid")
+	@SerializedName("order_number")
 	private String recTradeId;
-	@SerializedName("orderid")
+	@SerializedName("bank_transaction_id")
 	private String orderId;
 
 	public GetRecordFilters(Builder builder) {
@@ -127,7 +125,9 @@ public class GetRecordFilters {
 		private String recTradeId;
 		private String orderId;
 
-		/**Set GetRecordFiltersTime for GetRecordFilters.
+		/**
+		 * Set GetRecordFiltersTime for GetRecordFilters.
+		 * 
 		 * @param time
 		 * 
 		 */
@@ -136,7 +136,9 @@ public class GetRecordFilters {
 			return this;
 		}
 
-		/**Set GetRecordFiltersPaymentType for GetRecordFilters.
+		/**
+		 * Set GetRecordFiltersPaymentType for GetRecordFilters.
+		 * 
 		 * @param paymentType
 		 * 
 		 */
@@ -145,7 +147,9 @@ public class GetRecordFilters {
 			return this;
 		}
 
-		/**Set GetRecordFiltersAmount for GetRecordFilters.
+		/**
+		 * Set GetRecordFiltersAmount for GetRecordFilters.
+		 * 
 		 * @param amount
 		 * 
 		 */
@@ -154,7 +158,9 @@ public class GetRecordFilters {
 			return this;
 		}
 
-		/**Set appId for GetRecordFilters.
+		/**
+		 * Set appId for GetRecordFilters.
+		 * 
 		 * @param appId
 		 * 
 		 */
@@ -163,7 +169,9 @@ public class GetRecordFilters {
 			return this;
 		}
 
-		/**Set merchantId for GetRecordFilters.
+		/**
+		 * Set merchantId for GetRecordFilters.
+		 * 
 		 * @param merchantId
 		 * 
 		 */
@@ -172,7 +180,9 @@ public class GetRecordFilters {
 			return this;
 		}
 
-		/**Set recordStatus for GetRecordFilters.
+		/**
+		 * Set recordStatus for GetRecordFilters.
+		 * 
 		 * @param recordStatus
 		 * 
 		 */
@@ -181,7 +191,9 @@ public class GetRecordFilters {
 			return this;
 		}
 
-		/**Set recTradeId for GetRecordFilters.
+		/**
+		 * Set recTradeId for GetRecordFilters.
+		 * 
 		 * @param recTradeId
 		 * 
 		 */
@@ -190,7 +202,9 @@ public class GetRecordFilters {
 			return this;
 		}
 
-		/**Set orderId for GetRecordFilters.
+		/**
+		 * Set orderId for GetRecordFilters.
+		 * 
 		 * @param orderId
 		 * 
 		 */
@@ -199,7 +213,9 @@ public class GetRecordFilters {
 			return this;
 		}
 
-		/**Build GetRecordFilters for adding filters to RecordRequest.
+		/**
+		 * Build GetRecordFilters for adding filters to RecordRequest.
+		 * 
 		 * @return GetRecordFilters
 		 */
 		public GetRecordFilters build() {

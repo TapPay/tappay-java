@@ -15,7 +15,7 @@ public class GetRecordOrderBy {
 
 	@SerializedName("attribute")
 	private String attribute;
-	@SerializedName("isdescending")
+	@SerializedName("is_descending")
 	private Boolean isDescending;
 
 	public GetRecordOrderBy(OrderByAttributes attr, boolean isDescending) {
