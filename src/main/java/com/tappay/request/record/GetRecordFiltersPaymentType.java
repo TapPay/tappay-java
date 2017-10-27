@@ -8,11 +8,11 @@ import com.google.gson.annotations.SerializedName;
  */
 public class GetRecordFiltersPaymentType {
 
-	@SerializedName("directpay")
+	@SerializedName("direct_pay")
 	private Boolean directPay;
-	@SerializedName("applepay")
+	@SerializedName("apple_pay")
 	private Boolean applePay;
-	@SerializedName("androidpay")
+	@SerializedName("android_pay")
 	private Boolean androidPay;
 
 	private GetRecordFiltersPaymentType(Builder builder) {

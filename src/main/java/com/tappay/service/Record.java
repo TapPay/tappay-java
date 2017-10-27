@@ -13,8 +13,8 @@ import com.tappay.utils.ApiRequestUtil;
  */
 public class Record {
 
-	private static final String SANDBOX_GET_RECORD_URL = "https://sandbox.tappayapis.com/tpc/partner/getrecordsplus";
-	private static final String PRODUCTION_GET_RECORD_URL = "https://prod.tappayapis.com/tpc/partner/getrecordsplus";
+	private static final String SANDBOX_GET_RECORD_URL = "https://sandbox.tappayapis.com/tpc/transaction/query";
+	private static final String PRODUCTION_GET_RECORD_URL = "https://prod.tappayapis.com/tpc/transaction/query";
 
 	private Record() {}
 
