@@ -1,3 +1,7 @@
+# Deprecated - 20200824 updated
+
+This module is not longer maintained, please do not use this module.
+
 # TapPay Java Library
 You can sign up for TapPay account at [https://www.tappaysdk.com](https://www.tappaysdk.com)
 ## Requirements
